@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const NotFoundView = () => {
+const NotFoundPage = () => {
   return (
     <h3>
       Oops, this page not found go to <Link to="/">Home page!</Link>
@@ -8,4 +8,4 @@ const NotFoundView = () => {
   );
 };
 
-export default NotFoundView;
+export default NotFoundPage;

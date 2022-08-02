@@ -47,7 +47,7 @@ export const fetchMovieReview = async id => {
   try {
     const response = await axios
       .get(`/movie/${id}/reviews`, params)
-      .then(response => response.data);
+      .then(response => response.data.results);
     return response;
   } catch (error) {
     console.error(error);
