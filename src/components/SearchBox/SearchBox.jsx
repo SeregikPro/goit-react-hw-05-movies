@@ -13,3 +13,7 @@ const SearchBox = ({ onSubmit }) => {
 };
 
 export default SearchBox;
+
+SearchBox.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
