@@ -1,14 +1,13 @@
 import PropTypes from 'prop-types';
-import { Wrapper, Input, Icon } from './SearchBox.styled';
+import { Input } from './SearchBox.styled';
+import Box from 'components/Box';
 
 const SearchBox = ({ onSubmit }) => {
   return (
-    <Wrapper>
+    <Box as="form" onSubmit={onSubmit}>
       <Input name="query" autoComplete="off" placeholder="Search movies" />
-      <button type="submit">
-        <Icon />
-      </button>
-    </Wrapper>
+      <button type="submit">Search</button>
+    </Box>
   );
 };
 
