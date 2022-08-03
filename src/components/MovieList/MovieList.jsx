@@ -1,23 +1,24 @@
 import PropTypes from 'prop-types';
-import { Link, useLocation } from 'react-router-dom';
-// import { List } from './MovieList.styled';
+import { useLocation } from 'react-router-dom';
+import { ListEl, Navlink } from './MovieList.styled';
+import Box from 'components/Box';
 
 const MovieList = ({ movies }) => {
   const location = useLocation();
 
   return (
-    <ul>
+    <Box as="ul" pl="20px">
       {movies.length > 0 &&
         movies.map(({ id, title }) => {
           return (
-            <li key={id}>
-              <Link to={`/movies/${id}`} state={{ from: location }}>
+            <ListEl key={id}>
+              <Navlink to={`/movies/${id}`} state={{ from: location }}>
                 {title}
-              </Link>
-            </li>
+              </Navlink>
+            </ListEl>
           );
         })}
-    </ul>
+    </Box>
   );
 };
 
@@ -26,7 +27,7 @@ MovieList.propTypes = {
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       title: PropTypes.string.isRequired,
-    })
+    }).isRequired
   ).isRequired,
 };
 

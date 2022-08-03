@@ -5,7 +5,7 @@ import Box from 'components/Box';
 
 const Layout = () => {
   return (
-    <Box>
+    <Box as="main">
       <AppBar />
       <Suspense fallback={<section>Loading...</section>}>
         <Outlet />

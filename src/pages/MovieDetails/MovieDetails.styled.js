@@ -24,6 +24,8 @@ export const BackButton = styled.button`
 
 export const ButtonText = styled.div`
   font-size: 16px;
+  font-weight: 700;
+  color: rgba(80, 80, 80, 0.5);
   padding: 10px 0 10px 25px;
   opacity: 0;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);

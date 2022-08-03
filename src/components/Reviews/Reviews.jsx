@@ -14,7 +14,7 @@ const Reviews = () => {
   }, [movieId]);
 
   return (
-    <Box as="ul">
+    <Box as="ul" p="30px">
       {reviewData && reviewData.length > 0 ? (
         reviewData.map(({ id, author, content }) => {
           return (

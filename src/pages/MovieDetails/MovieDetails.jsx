@@ -32,7 +32,7 @@ const MovieDetails = () => {
   const { title, poster_path, genres, vote_average, overview } = movieData;
 
   return (
-    <Box>
+    <Box as="section">
       {movieData && (
         <Box>
           <BackButton
@@ -64,7 +64,11 @@ const MovieDetails = () => {
               </p>
             </Box>
           </Box>
-          <Box pb="10px" boxShadow="0px 3px 1px 1px rgba(100, 100, 150, 0.15)">
+          <Box
+            pb="10px"
+            pl="30px"
+            boxShadow="0px 3px 1px 1px rgba(100, 100, 150, 0.15)"
+          >
             <h3>Additional information</h3>
             <p>
               <Link to="cast" state={{ from: location.state?.from }}>

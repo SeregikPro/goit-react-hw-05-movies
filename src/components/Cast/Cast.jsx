@@ -18,7 +18,13 @@ const Cast = () => {
   return (
     <>
       {movieCast && (
-        <Box as="ul">
+        <Box
+          display="grid"
+          gridGap="20px"
+          gridTemplateColumns="repeat(auto-fit, 200px)"
+          as="ul"
+          p="30px"
+        >
           {movieCast.cast.map(
             ({ id, name, profile_path: profileImg, character }) => {
               return (

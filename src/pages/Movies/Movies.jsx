@@ -26,7 +26,7 @@ const Movies = () => {
   };
 
   return (
-    <div>
+    <Box as="section" ml="30px">
       <h2>Movies</h2>
       <Box>
         <SearchBox onSubmit={handleSearchChange} />
@@ -34,7 +34,7 @@ const Movies = () => {
           <MovieList movies={movies} state={{ from: location }} />
         )}
       </Box>
-    </div>
+    </Box>
   );
 };
 

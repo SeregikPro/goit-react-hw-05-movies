@@ -3,7 +3,7 @@ import Navigation from 'components/Navigation';
 
 const AppBar = () => {
   return (
-    <Box>
+    <Box as="header">
       <Navigation />
     </Box>
   );
