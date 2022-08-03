@@ -27,7 +27,7 @@ const Movies = () => {
 
   return (
     <Box as="section" ml="30px">
-      <h2>Movies</h2>
+      <h1>Movies</h1>
       <Box>
         <SearchBox onSubmit={handleSearchChange} />
         {movies.length > 0 && (
