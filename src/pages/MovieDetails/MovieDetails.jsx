@@ -9,7 +9,7 @@ import {
   Navigate,
 } from 'react-router-dom';
 import Box from 'components/Box';
-import { BackButton, Icon } from './MovieDetails.styled';
+import { Poster, BackButton, ButtonText, Icon } from './MovieDetails.styled';
 
 const MovieDetails = () => {
   const [movieData, setMovieData] = useState();
@@ -39,11 +39,17 @@ const MovieDetails = () => {
             type="button"
             onClick={() => navigate(location?.state?.from ?? '/')}
           >
+            <ButtonText>Go back</ButtonText>
             <Icon />
           </BackButton>
-          <Box display="flex">
-            <img src={`${API_IMG_URL}${poster_path}`} alt="movie poster" />
-            <div>
+          <Box
+            display="flex"
+            height="450px"
+            pb="10px"
+            boxShadow="0px 3px 1px 1px rgba(100, 100, 150, 0.15)"
+          >
+            <Poster src={`${API_IMG_URL}${poster_path}`} alt="movie poster" />
+            <Box ml="20px">
               <h2>{title}</h2>
               <p>
                 User score: <b>{vote_average}</b>
@@ -56,9 +62,9 @@ const MovieDetails = () => {
                   <span key={id}>{name}</span>
                 ))}
               </p>
-            </div>
+            </Box>
           </Box>
-          <Box>
+          <Box pb="10px" boxShadow="0px 3px 1px 1px rgba(100, 100, 150, 0.15)">
             <h3>Additional information</h3>
             <p>
               <Link to="cast" state={{ from: location.state?.from }}>
