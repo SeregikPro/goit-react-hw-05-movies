@@ -4,6 +4,9 @@ import { NavLink } from 'react-router-dom';
 export const List = styled.ul`
   display: flex;
   list-style: none;
+  padding-bottom: 20px;
+  box-shadow: 0px 3px 2px 2px rgba(100, 100, 150, 0.15);
+  border-bottom: solid 1px #fff;
 `;
 
 export const Navlink = styled(NavLink)`
@@ -18,6 +21,6 @@ export const Navlink = styled(NavLink)`
   }
 
   :hover {
-    color: #aa5050;
+    color: #cc8050;
   }
 `;

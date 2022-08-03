@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { searchMovies } from 'services/moviesAPI';
 import SearchBox from 'components/SearchBox';
 import MovieList from 'components/MovieList';
+import Box from 'components/Box';
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -27,12 +28,12 @@ const Movies = () => {
   return (
     <div>
       <h2>Movies</h2>
-      <div>
+      <Box>
         <SearchBox onSubmit={handleSearchChange} />
         {movies.length > 0 && (
           <MovieList movies={movies} state={{ from: location }} />
         )}
-      </div>
+      </Box>
     </div>
   );
 };

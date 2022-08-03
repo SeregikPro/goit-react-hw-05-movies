@@ -9,6 +9,7 @@ import {
   Navigate,
 } from 'react-router-dom';
 import Box from 'components/Box';
+import { BackButton, Icon } from './MovieDetails.styled';
 
 const MovieDetails = () => {
   const [movieData, setMovieData] = useState();
@@ -34,13 +35,13 @@ const MovieDetails = () => {
     <Box>
       {movieData && (
         <Box>
-          <button
+          <BackButton
             type="button"
             onClick={() => navigate(location?.state?.from ?? '/')}
           >
-            Go back
-          </button>
-          <div>
+            <Icon />
+          </BackButton>
+          <Box display="flex">
             <img src={`${API_IMG_URL}${poster_path}`} alt="movie poster" />
             <div>
               <h2>{title}</h2>
@@ -56,7 +57,7 @@ const MovieDetails = () => {
                 ))}
               </p>
             </div>
-          </div>
+          </Box>
           <Box>
             <h3>Additional information</h3>
             <p>
